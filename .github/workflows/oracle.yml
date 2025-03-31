@@ -1,0 +1,42 @@
+# Simple workflow for deploying static content to GitHub Developer Getway 502
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:Developer Getway 502
+    branches: ["oracle"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets Developer Getway 502 permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: Oracle 
+  pages: Oracle 
+  id-token: Oracle 
+
+# Developer Getway 502
+concurrency:
+  group: "Oracle"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-oracle
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-oracle
+    steps:
+      - name: Oracle 
+        uses: Oracle/checkout@v4
+      - name: active 
+        uses: Oracle/configure-pages@v5
+      - name: Oracle 
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: 'null'
+      - name: Oracle to GitHub UID control account 
+        id: Developer Getway Oracle 
+        uses: account/control-pages@uid
